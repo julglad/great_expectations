@@ -1,0 +1,154 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "ygladkikh.ods_traffic.warning",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "time_stamp"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "time_stamp",
+        "type_list": [
+          "int8",
+          "BIGINT"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "user_id",
+          "time_stamp",
+          "device_serial",
+          "device_ip_addr",
+          "bytes_sent",
+          "bytes_received"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "user_id"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "user_id",
+        "max_value": 0.1,
+        "min_value": 0.01
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "user_id",
+        "type_list": [
+          "int8",
+          "BIGINT"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "device_serial",
+        "regex": "d[0-9]{3}"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "device_serial"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "device_ip_addr",
+        "regex": "[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "device_ip_addr"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "bytes_sent"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "bytes_sent",
+        "type_list": [
+          "int8",
+          "BIGINT"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "bytes_received"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "bytes_received",
+        "type_list": [
+          "int8",
+          "BIGINT"
+        ]
+      },
+      "meta": {}
+    }
+  ],
+  "meta": {
+    "columns": {
+      "bytes_received": {
+        "description": ""
+      },
+      "bytes_sent": {
+        "description": ""
+      },
+      "device_ip_addr": {
+        "description": ""
+      },
+      "device_serial": {
+        "description": ""
+      },
+      "time_stamp": {
+        "description": ""
+      },
+      "user_id": {
+        "description": ""
+      }
+    },
+    "great_expectations_version": "0.13.14"
+  }
+}

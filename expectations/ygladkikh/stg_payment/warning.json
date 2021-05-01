@@ -1,0 +1,195 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "ygladkikh.stg_payment.warning",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "user_id",
+          "pay_doc_type",
+          "pay_doc_num",
+          "account",
+          "phone",
+          "billing_period",
+          "pay_date",
+          "sum"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "user_id"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "user_id",
+        "max_value": 0.1,
+        "min_value": 0.01
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "pay_doc_type",
+        "value_set": [
+          "MASTER",
+          "MIR",
+          "VISA"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "pay_doc_num"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "account"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "phone"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "phone",
+        "regex": "\\+79[0-9]{9}"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "billing_period",
+        "max_value": "2021-12-31 00:00:00",
+        "min_value": "2012-01-01 00:00:00"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "billing_period"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "pay_date"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "pay_date",
+        "max_value": "2021-12-31 00:00:00",
+        "min_value": "2012-01-01 00:00:00"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "sum"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "sum",
+        "type_list": [
+          "NUMERIC",
+          "DECIMAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "user_id",
+        "type_list": [
+          "int8",
+          "BIGINT"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "pay_doc_type"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "pay_doc_num",
+        "type_list": [
+          "int8",
+          "BIGINT"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "account",
+        "regex": "FL-[0-9]{1,}"
+      },
+      "meta": {}
+    }
+  ],
+  "meta": {
+    "columns": {
+      "account": {
+        "description": ""
+      },
+      "billing_period": {
+        "description": ""
+      },
+      "pay_date": {
+        "description": ""
+      },
+      "pay_doc_num": {
+        "description": ""
+      },
+      "pay_doc_type": {
+        "description": ""
+      },
+      "phone": {
+        "description": ""
+      },
+      "sum": {
+        "description": ""
+      },
+      "user_id": {
+        "description": ""
+      }
+    },
+    "great_expectations_version": "0.13.14"
+  }
+}
